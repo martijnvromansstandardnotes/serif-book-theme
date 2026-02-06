@@ -1,0 +1,9 @@
+{
+  "identifier": "nl.felixeditions.serifbook.theme",
+  "name": "Serif Book",
+  "content_type": "SN|Theme",
+  "area": "themes",
+  "version": "1.0.0",
+  "url": "https://martijnvromansstandardnotes.github.io/serif-book-theme/dist/dist.css",
+  "download_url": "https://github.com/martijnvromansstandardnotes/serif-book-theme/archive/refs/tags/v1.0.0.zip"
+}
