@@ -1,0 +1,137 @@
+/* =====================================================
+   SERIF BOOK — MODERN CLEAN EDITORIAL THEME
+   hoofdtekst serif / koppen sans / lichte UI
+   ===================================================== */
+
+:root {
+
+  /* ---------- Fonts ---------- */
+
+  /* Strakke UI en headings */
+  --sn-stylekit-sans-serif-font:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  /* Moderne rustige serif voor hoofdtekst */
+  --sn-stylekit-serif-font:
+    "Iowan Old Style",
+    Georgia,
+    serif;
+
+  --sn-stylekit-monospace-font:
+    ui-monospace,
+    "SF Mono",
+    Menlo,
+    Monaco,
+    Consolas,
+    monospace;
+
+  /* ---------- Basis kleuren ---------- */
+
+  --sn-stylekit-background-color: #ffffff;
+  --sn-stylekit-foreground-color: #111111;
+  --sn-stylekit-paragraph-text-color: #222222;
+  --sn-stylekit-border-color: #eeeeee;
+
+  /* Accent subtiel */
+  --sn-stylekit-info-color: #2a6df4;
+
+  /* ---------- Typografie ---------- */
+
+  --sn-stylekit-base-font-size: 16px;
+  --sn-stylekit-font-size-editor: 1.06rem;
+}
+
+/* =====================================================
+   UI — strak, licht, sans-serif
+   ===================================================== */
+
+body,
+.app,
+.sn-component {
+  font-family: var(--sn-stylekit-sans-serif-font) !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Minder zware panel borders */
+.sn-component,
+.sn-list-item,
+.sn-panel {
+  border-color: var(--sn-stylekit-border-color) !important;
+}
+
+/* =====================================================
+   EDITOR — moderne editorial typografie
+   ===================================================== */
+
+/* Hoofdtekst: serif */
+.ProseMirror,
+.cm-editor,
+.CodeMirror,
+[contenteditable="true"] {
+  font-family: var(--sn-stylekit-serif-font) !important;
+  font-size: var(--sn-stylekit-font-size-editor) !important;
+  line-height: 1.65 !important;
+  letter-spacing: 0.01em;
+  color: var(--sn-stylekit-paragraph-text-color) !important;
+
+  /* rustige leeskolom */
+  max-width: 78ch;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-top: 1.2rem;
+}
+
+/* Koppen: sans-serif */
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3,
+h1, h2, h3 {
+  font-family: var(--sn-stylekit-sans-serif-font) !important;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #111;
+  margin: 1.3em 0 0.4em 0 !important;
+}
+
+.ProseMirror h1, h1 { font-size: 1.6em !important; }
+.ProseMirror h2, h2 { font-size: 1.35em !important; }
+.ProseMirror h3, h3 { font-size: 1.15em !important; }
+
+/* Paragraafritme */
+.ProseMirror p {
+  margin: 0 0 0.85em 0 !important;
+}
+
+/* Quotes: minimalistisch */
+.ProseMirror blockquote,
+blockquote {
+  border-left: 2px solid #e6e6e6 !important;
+  color: #555 !important;
+  padding-left: 1rem !important;
+  margin: 1em 0 !important;
+}
+
+/* Links strak */
+a {
+  color: var(--sn-stylekit-info-color) !important;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(42,109,244,0.25);
+}
+
+/* Code blijft monospace */
+code,
+pre {
+  font-family: var(--sn-stylekit-monospace-font) !important;
+}
+
+/* Selectie */
+::selection {
+  background: rgba(42,109,244,0.18);
+}
